@@ -1,0 +1,19 @@
+{% load static %}
+
+<section class="hero-slider">
+  <div class="hero-items owl-carousel">
+    {% for s in my_slider %}
+    <div class="single-slider-item set-bg" data-setbg="{{ s.banner.url }}">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <h1>{{ s.title }}</h1>
+            <h2>{{ s.subtitle }}</h2>
+            <a href="#" class="primary-btn">Date Now</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</section>
